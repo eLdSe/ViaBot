@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>ViaBot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="topbar">
+        <div class="logo-icon">✈</div>
+        <div>
+          <div class="logo-text">Via<span>Bot</span></div>
+          <div class="logo-sub">Перевод и адаптация туристических текстов</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="lang-header" id="langHeader">
+          <div class="lang-header-left">
+            <div class="lang-current">
+              <span class="lang-badge" id="langBadge">🇪🇸</span>
+              <span id="langName">Испанский</span>
+            </div>
+            <span class="lang-toggle-hint">выберите язык перевода</span>
+          </div>
+          <span class="chevron" id="chevron">▾</span>
+        </div>
+        <div class="lang-grid" id="langGrid">
+          <button
+            class="lang-btn active"
+            data-lang="es"
+            data-flag="🇪🇸"
+            data-name="Испанский"
+            type="button"
+          >
+            <span class="flag">🇪🇸</span>Испанский
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="en"
+            data-flag="🇬🇧"
+            data-name="Английский"
+            type="button"
+          >
+            <span class="flag">🇬🇧</span>Английский
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="de"
+            data-flag="🇩🇪"
+            data-name="Немецкий"
+            type="button"
+          >
+            <span class="flag">🇩🇪</span>Немецкий
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="fr"
+            data-flag="🇫🇷"
+            data-name="Французский"
+            type="button"
+          >
+            <span class="flag">🇫🇷</span>Французский
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="zh"
+            data-flag="🇨🇳"
+            data-name="Китайский"
+            type="button"
+          >
+            <span class="flag">🇨🇳</span>Китайский
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="ar"
+            data-flag="🇸🇦"
+            data-name="Арабский"
+            type="button"
+          >
+            <span class="flag">🇸🇦</span>Арабский
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="ja"
+            data-flag="🇯🇵"
+            data-name="Японский"
+            type="button"
+          >
+            <span class="flag">🇯🇵</span>Японский
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="ko"
+            data-flag="🇰🇷"
+            data-name="Корейский"
+            type="button"
+          >
+            <span class="flag">🇰🇷</span>Корейский
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="it"
+            data-flag="🇮🇹"
+            data-name="Итальянский"
+            type="button"
+          >
+            <span class="flag">🇮🇹</span>Итальянский
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="pt"
+            data-flag="🇧🇷"
+            data-name="Португальский"
+            type="button"
+          >
+            <span class="flag">🇧🇷</span>Португальский
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="tr"
+            data-flag="🇹🇷"
+            data-name="Турецкий"
+            type="button"
+          >
+            <span class="flag">🇹🇷</span>Турецкий
+          </button>
+          <button
+            class="lang-btn"
+            data-lang="hi"
+            data-flag="🇮🇳"
+            data-name="Хинди"
+            type="button"
+          >
+            <span class="flag">🇮🇳</span>Хинди
+          </button>
+        </div>
+      </div>
+
+      <div class="card" style="padding: 16px 22px">
+        <div class="mode-tabs">
+          <button class="mode-btn active" data-mode="literal" type="button">
+            📋 Дословный
+          </button>
+          <button class="mode-btn" data-mode="adapted" type="button">
+            🌍 Адаптированный
+          </button>
+          <button class="mode-btn" data-mode="advertising" type="button">
+            ✨ Рекламный
+          </button>
+        </div>
+        <div class="mode-detail" id="modeDetail">
+          <strong>Дословный</strong> — точная передача смысла и структуры
+          оригинала без отступлений.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="columns">
+          <div>
+            <div class="col-label">Оригинал (RU)</div>
+            <textarea
+              class="vb-textarea"
+              id="sourceText"
+              placeholder="Вставьте или напишите текст здесь..."
+            ></textarea>
+            <div class="char-count" id="charCount">0 / 2000</div>
+          </div>
+          <div>
+            <div class="col-label">Перевод</div>
+            <div class="result-wrap">
+              <div class="result-box" id="resultBox">
+                <span id="resultText">Здесь появится перевод...</span>
+              </div>
+              <button class="copy-btn" id="copyBtn" type="button">
+                ⎘ Копировать
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="translate-btn" id="translateBtn" type="button">
+          ✈ Перевести
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
